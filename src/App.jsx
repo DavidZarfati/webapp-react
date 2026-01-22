@@ -6,7 +6,9 @@ import AppLayout from './layouts/AppLayout';
 import Home from './pages/Home';
 
 import './App.css'
+
 import FilmPage from './pages/FilmPage';
+import SingleFilmPage from './pages/SingleFilmPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +21,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route element={<Home />} path='/' />
             <Route element={<FilmPage />} path='/films' />
+            <Route element={<SingleFilmPage />} path='/films/:id' />
           </Route>
         </Routes>
       </BrowserRouter>

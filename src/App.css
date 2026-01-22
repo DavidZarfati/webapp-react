@@ -1,0 +1,6 @@
+.film-img-responsive {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: block;
+}
