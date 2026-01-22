@@ -1,13 +1,16 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+
 export default function FilmPage() {
     const [films, setFilms] = useState([])
+
+    console.log(import.meta.env.VITE_SERVER);
 
     useEffect(() => {
         console.log("Chiamo Api");
         axios
-            .get("http://localhost:3000/films/")
+            .get(`http://${import.meta.env.VITE_SERVER}/films/`)
             .then((resp) => {
                 setFilms(resp.data.results)
             })
